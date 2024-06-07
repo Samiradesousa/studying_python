@@ -1,6 +1,6 @@
 import os
 
-jogos = [{'nome':'Cs','categoria':'Plataforma', 'ativo': False},
+jogos = [{'nome':'Csgo','categoria':'Plataforma', 'ativo': False},
          {'nome':'Mario','categoria':'Plataforma', 'ativo': True},
           {'nome':'lol','categoria':'RPG', 'ativo': False}]
 
