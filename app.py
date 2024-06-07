@@ -1,7 +1,7 @@
 import os
 
-jogos = [{'nome':'Cs','categoria':'Plataforma', 'Ativo': False},
-         {'nome':'Mario','categoria':'Plataforma', 'Ativo': True},
+jogos = [{'nome':'Cs','categoria':'Plataforma', 'ativo': False},
+         {'nome':'Mario','categoria':'Plataforma', 'ativo': True},
           {'nome':'lol','categoria':'RPG', 'ativo': False}]
 
 def exibir_nome_do_programa():    
@@ -41,8 +41,9 @@ def cadastra_novo_jogo():
     os.system('cls')
     print('Cadastra novo jogo\n')
     nome_jogo = input('Digite o nome do jogo: ')
-    jogos.append(nome_jogo)
-    print(jogos)
+    categoria = input('Digite a categoria: ')
+    dados_do_jogo = {'nome':nome_jogo, 'categoria':categoria, 'ativo':False}
+    jogos.append(dados_do_jogo)
     input('Digite uma tecla para reiniciar: ')
     main()
 
@@ -50,7 +51,10 @@ def listar_jogos():
     os.system('cls')
     print('Lista de jogos')
     for jogo in jogos:
-        print(f'{jogo}')
+        nome_do_jogo = jogo['nome']
+        categoria_do_jogo = jogo['categoria']
+        ativo_jogo = jogo['ativo']
+        print(f' - {nome_do_jogo} | {categoria_do_jogo} | {ativo_jogo}')
 
     input('Digite uma tecla para reiniciar: ')
     main()
@@ -59,6 +63,7 @@ def escolher_opcoes():
     try:
         opcao_escolhida = int(input('''Escolha uma opção ¯\_( ͡❛ ͜ʖ ͡❛)_/¯: '''))
         print(f'''Você escolheu a opção( ͡❛ ͜ʖ ͡❛)👌: {opcao_escolhida}''')
+
         if opcao_escolhida == 1:
             cadastra_novo_jogo()
         elif opcao_escolhida == 2:
