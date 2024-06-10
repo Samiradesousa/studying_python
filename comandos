@@ -1,0 +1,97 @@
+def exibir_nome_do_programa():
+print(''' 
+
+██╗░░░░░██╗░██████╗████████╗██████╗░░█████╗░  ██████╗░███████╗
+██║░░░░░██║██╔════╝╚══██╔══╝██╔══██╗██╔══██╗  ██╔══██╗██╔════╝
+██║░░░░░██║╚█████╗░░░░██║░░░██████╔╝███████║  ██║░░██║█████╗░░
+██║░░░░░██║░╚═══██╗░░░██║░░░██╔══██╗██╔══██║  ██║░░██║██╔══╝░░
+███████╗██║██████╔╝░░░██║░░░██║░░██║██║░░██║  ██████╔╝███████╗
+╚══════╝╚═╝╚═════╝░░░░╚═╝░░░╚═╝░░╚═╝╚═╝░░╚═╝  ╚═════╝░╚══════╝
+
+░█████╗░░█████╗░███╗░░░███╗░█████╗░███╗░░██╗██████╗░░█████╗░░██████╗
+██╔══██╗██╔══██╗████╗░████║██╔══██╗████╗░██║██╔══██╗██╔══██╗██╔════╝
+██║░░╚═╝██║░░██║██╔████╔██║███████║██╔██╗██║██║░░██║██║░░██║╚█████╗░
+██║░░██╗██║░░██║██║╚██╔╝██║██╔══██║██║╚████║██║░░██║██║░░██║░╚═══██╗
+╚█████╔╝╚█████╔╝██║░╚═╝░██║██║░░██║██║░╚███║██████╔╝╚█████╔╝██████╔╝
+░╚════╝░░╚════╝░╚═╝░░░░░╚═╝╚═╝░░╚═╝╚═╝░░╚══╝╚═════╝░░╚════╝░╚═════╝░
+''')
+
+# Faça uma pesquisa detalhada sobre cada um dos comandos listados abaixo.
+# Para cada comando forneça:
+# 1-Descrição completa
+# 2-Exemplo de Uso
+# 3-Explicação de como funciona
+
+# ( **** Print **** )
+#  Descrição: Usando para exibir a saída do programa.
+# Exemplo: 
+
+print('Hellow Word')
+
+# Envia o texto ou variável fornecida para a saída padrão ( geralmente o terminal.)
+
+# ( **** Input **** )
+# Descrição: Permite ao programa receber entrada do usuário.
+# Exemplo: 
+
+input("Digite seu nome: ")
+
+# ( **** IF - ELSE - ELIF **** )
+# Descrição: Esrtuturas de controle de fluxo para executar diferentes blocos de código com base em condições. 
+# Exemplo: 
+
+if idade < 18:
+    print("Menor de idade")
+elif idade == 18:
+    print("Tem 18 anos")
+else:
+    print("Maior de idade")
+
+# ( **** For **** )
+# Descrição: Ultilizando para iterar sobre uma sequência ( como uma lista, tupla ou string).
+# Exemplo:
+
+For i in range(5):
+
+# Como funciona: Executa um bloco de código para cada item na sequência.
+
+# ( **** While Loops **** )
+# Descrição: Executa um conjunto de instruções enquanto um condição é verdadeira
+# Exemplo:
+
+x = 0
+while x < 5:
+    print(x)
+    x += 1 
+
+# Como funciona: continua a execução do bloco de código até que a condição especificada deixe de ser verdadera.
+
+# ( **** Listas**** ) 
+#  Descrição: Estruturas de dados que armazenam coleções ordenadas de itens.
+# Exemplo:
+
+lista = [1, 2, 3]
+
+# Como funciona: Permite acessar itens usando uma chave única.
+
+# (*** Dicionários ***)
+# Descrição: Coleçãos de pares chave-valor.
+# Exemplo:
+
+dicionario = {'nome': 'Maria'. 'idade': 22}
+
+# Como funciona: Permite acessa itens usando uma chave única.
+
+# (*** Funções ***)
+# Descrições: Blocos de código reutilizáveis que realizam uma tarefa específica.
+# Exemplo:
+
+Def saudacao(nome):
+    return f'olá, {nome}!'
+
+# Como funciona: Pode receber parâmetros ou não e retornar um resultado.
+
+# (**** Módulos ****)
+# Descrição: Arquivos contendo definiçõess e instruções Python que podem ser importados.
+# Exemplos: import math
+# Como funciona: fornece funionalidades adicionais que podem ser ultilizadas em seu código.
