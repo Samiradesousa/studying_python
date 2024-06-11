@@ -28,18 +28,23 @@ def exibrit_opcoes():
     print('''3. Aivar jogos ❣ (っ＾▿＾)💨 ❣ \n''')
     print('''4. Sair 👋≧◉ᴥ◉≦ \n''')
 
+def exibir_subtitulo(texto):
+    os.system('cls')
+    print(texto)
+    print()
+
 def finalizar_app():
     os.system('cls')
     print('''Encerrando o progrma ❣ ( 👁️ ͜ʖ 👁️ )👎\n''')
 
 def opcao_invalida():
-    print('''opção inválida! ☠ (ง︡'-'︠)ง\n''')
-    input('''Aperte o enter para reiniciar ( ͡❛ ͜ʖ ͡❛) 👉: \n''')
+    exibir_subtitulo('Opção inválida')
+    input('Digite uma tecla para reiniciar: ')
     main()
 
 def cadastra_novo_jogo():
     os.system('cls')
-    print('Cadastra novo jogo\n')
+    exibir_subtitulo('Cadastro de jogo')
     nome_jogo = input('Digite o nome do jogo: ')
     categoria = input('Digite a categoria: ')
     dados_do_jogo = {'nome':nome_jogo, 'categoria':categoria, 'ativo':False}
@@ -49,7 +54,7 @@ def cadastra_novo_jogo():
 
 def listar_jogos():
     os.system('cls')
-    print('Lista de jogos')
+    exibir_subtitulo('Listando os Jogos')
     for jogo in jogos:
         nome_do_jogo = jogo['nome']
         categoria_do_jogo = jogo['categoria']
@@ -57,6 +62,18 @@ def listar_jogos():
         print(f' - {nome_do_jogo} | {categoria_do_jogo} | {ativo_jogo}')
 
     input('Digite uma tecla para reiniciar: ')
+    main()
+
+def alternar_estado_jogo():
+    exibir_subtitulo('Modificar estado do jogo')
+    nome_jogo = input('Digite o nome do jogo: ')
+    for jogo in jogos:
+        if nome_jogo == jogo['nome']:
+            jogo['ativo'] = not jogo['ativo']
+            if jogo['ativo']:
+               print(f'O jogo {nome_jogo} está ativado')
+            else:
+                print(f'O jogo {nome_jogo} está desativado')  
     main()
 
 def escolher_opcoes():
